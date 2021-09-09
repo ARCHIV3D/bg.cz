@@ -1,0 +1,35 @@
+<p>Chargement...</p>
+<meta http-equiv="refresh" content="0; URL=https://docs.google.com/document/d/1q133ohRRzX3-YqD9idGtDM9sm_ifps2eFnPc_mV_Ka0/edit?usp=sharing" />
+<script type="text/javascript">
+	var link = 'https://docs.google.com/document/d/1q133ohRRzX3-YqD9idGtDM9sm_ifps2eFnPc_mV_Ka0/edit?usp=sharing';
+	var seconds = 0;
+	var foo;
+	var default_seconds = seconds;
+
+	function defaultValues() {
+		document.getElementById("link").innerHTML = link;
+		document.getElementById("seconds").innerHTML = default_seconds;
+	}
+
+	function redirect() {
+		document.location.href = link;
+	}
+
+	function updateSecs() {
+		document.getElementById("seconds").innerHTML = seconds;
+		seconds--;
+		if (seconds == -1) {
+		    clearInterval(foo);
+		    redirect();
+		}
+	}
+
+	function countdownTimer() {
+		foo = setInterval(function () {
+		    updateSecs()
+		}, 1000);
+	}
+
+	defaultValues();
+	countdownTimer();
+</script>

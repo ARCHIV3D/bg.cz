@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
 	<link rel="dns-prefetch" href="//docs.google.com">
 	<link rel="dns-prefetch" href="//ssl.gstatic.com">
@@ -13,42 +13,29 @@
 	<link rel="shortcut icon" href="assets/img/986b62020ec24a66c083ae9bdff0d90f.jpg">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow" />
-	<style type="text/css">
-		body {
-		    margin: 0;
-		    overflow-y: hidden;
-		    overflow-x: hidden;
-		}
-		iframe {
-		    display: block;
-		    background: #000;
-		    border: none;
-		    height: 99.9vh;
-		    width: 100vw;
-		    margin-top: -10vh;
-		}
-		#bt-nav {
-		    color: #fff;
-		    appearance: none;
-		    background-color: #2c2c2c!important;
-		    border-style: none!important;
-		    font-size: .875rem;
-		    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-		    min-height: 80px;
-		    font-size: .875rem;
-		    text-transform: uppercase;
-		}
-		#bt-nav:hover {
-			color: #7d7d7d;
-		}
-		.uk-notification-message-warning {
-			padding: 15px !important;
-   			font-size: 1.14rem !important;
-		}
-	</style>
-	<link rel="stylesheet" type="text/css" href="assets/css/uikit.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/my.css">
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
-	<script src="assets/js/include.js"></script>
+	<script src="assets/js/get.js"></script>
+	<script type="text/javascript">
+		// Get.js integrated
+		function dataStart() {
+		  $('.data-swap').attr('src','assets/html/start.html');
+		  window.history.pushState('start', 'Start - Background de Miroslava Smejkalová', '/hors-roleplay?skipTo=start');
+		}
+		function dataBackground() {
+		  $('.data-swap').attr('src','https://docs.google.com/document/d/1q133ohRRzX3-YqD9idGtDM9sm_ifps2eFnPc_mV_Ka0/edit?usp=sharing');
+		  $('.data-get').attr('href','/hors-roleplay?skipTo=background');
+		  window.history.pushState('background', 'Background de Miroslava Smejkalová', '/hors-roleplay?skipTo=background');
+		}
+		function dataResume() {
+		  $('.data-swap').attr('src','https://docs.google.com/document/d/10tbM-yULa_7aInAmq-GIlfvZycwD9Ak0vPV-nldLTew/edit?usp=sharing');
+		  window.history.pushState('resume', 'Résumé - Background de Miroslava Smejkalová', '/hors-roleplay?skipTo=resume');
+		}
+		function dataEScene() {
+		  $('.data-swap').attr('src','assets/html/endscene.html');
+		  window.history.pushState('endscene', 'EndScene - Background de Miroslava Smejkalová', '/hors-roleplay?skipTo=endscene');
+		}
+	</script>
 	<script type="text/javascript">
 		jQuery(document).ready(function( $ ){
 		   $('iframe').on('load', function() {
@@ -58,55 +45,45 @@
 		   },)
 		});
 		function itsHRP(){
-			UIkit.notification({message: 'Cette page est totalement HRP, merci de ne pas en tenir compte en RP !', pos: 'top-center', status: 'danger'})
-			UIkit.notification({message: 'Des informations sont pas dites comme pour les ami(e)s pour évité le HRP/RP non voulu, et elle ne seront pas dites.', pos: 'top-left', status: 'warning', timeout: 0})	
+			UIkit.notification({message: 'Cette page est totalement HRP, merci de ne pas en tenir compte en RP !', pos: 'top-right', status: 'danger'})
+			UIkit.notification({message: 'Des informations sont pas dites comme pour les ami(e)s pour évité le HRP/RP non voulu, et elle ne seront pas dites.', pos: 'top-right', status: 'warning', timeout: 0})	
 		}
 	</script>
 </head>
 <body onload="itsHRP();">
 <nav class="uk-navbar-container uk-margin" style="background-color:#2c2c2c;color:white!important;" uk-navbar>
-    <div class="uk-navbar-center">
-        <div class="uk-navbar-center-left">
-        	<div>
-	            <ul class="uk-navbar-nav">
-	            	<li>
-	                	<a title='Raisons de la demande de WIPE' uk-tooltip='title: Raisons de la demande de WIPE' href="#wipe" rel="noopener" uk-toggle>Raisons WIPE</a>
-	                </li>
-	                <li>
-	                	<a><button title='Background en entier' uk-tooltip='title: Background en entier' class="background" id="bt-nav" onclick="$('.data-swap').attr('src','https://docs.google.com/document/d/1q133ohRRzX3-YqD9idGtDM9sm_ifps2eFnPc_mV_Ka0/edit?usp=sharing')">Background</button></a>
-	                </li>
-	                <li>
-	                	<a><button title='Résumé du background' uk-tooltip='title: Résumé du background' class="resume" id="bt-nav" onclick="$('.data-swap').attr('src','https://docs.google.com/document/d/10tbM-yULa_7aInAmq-GIlfvZycwD9Ak0vPV-nldLTew/edit?usp=sharing')">Résumé</button></a>
-	                </li>
-	            </ul>
-        	</div>
-    	</div>
+    <div class="uk-navbar-left">
         <a class="uk-navbar-item uk-logo">
-        	<img src="assets/img/986b62020ec24a66c083ae9bdff0d90f.jpg" alt="logo" width="80" height="80" draggable="false" onclick="$('.data-swap').attr('src','assets/html/start.html')">
+        	<img src="assets/img/986b62020ec24a66c083ae9bdff0d90f.jpg" alt="logo" width="80" height="80" draggable="false" onclick="dataStart();">
         </a>
-        <div class="uk-navbar-center-right">
-        	<div>
-	            <ul class="uk-navbar-nav">
-	                <li>
-	                	<a title='Télécharger les .PDF en entier' uk-tooltip='title: Télécharger les .PDF en entier' href="#download" rel="noopener" uk-toggle>Télécharger les .PDF</a>
-	                </li>
-	                <li id="days.yearsOld">
-	                	{{ days.yearsOld }}
-	                </li>
-	                <li>
-	                	<a><button title='Scène RP de fin' uk-tooltip='title: Scène RP de fin' class="endscene" id="bt-nav" onclick="$('.data-swap').attr('src','assets/html/endscene.html')">End Scene</button></a>
-	                </li>
-	            </ul>
-        	</div>
-    	</div>
+        <ul class="uk-navbar-nav">
+            <li>
+	            <a title='Raisons de la demande de WIPE' uk-tooltip='title: Raisons de la demande de WIPE' href="#wipe" rel="noopener" uk-toggle>Raisons WIPE</a>
+	        </li>
+	        <li>
+	            <a><button title='Background en entier' uk-tooltip='title: Background en entier' class="background" id="bt-nav" onclick="dataBackground();">Background</button></a>
+	        </li>
+	        <li>
+	            <a><button title='Résumé du background' uk-tooltip='title: Résumé du background' class="resume" id="bt-nav" onclick="dataResume();">Résumé</button></a>
+	        </li>
+	        <li>
+	            <a title='Télécharger les .PDF en entier' uk-tooltip='title: Télécharger les .PDF en entier' href="#download" rel="noopener" uk-toggle>Télécharger les .PDF</a>
+	        </li>
+	        <li id="days.yearsOld">
+	            {{ days.yearsOld }}
+	        </li>
+	        <li>
+	            <a><button title='Scène RP de fin' uk-tooltip='title: Scène RP de fin' class="endscene" id="bt-nav" onclick="dataEScene();">End Scene</button></a>
+	        </li>
+        </ul>
     </div>
 </nav>
 
 <iframe 
-	src="assets/html/start.html" 
-	frameborder="0" width="100%" height="100%" allow="encrypted-media" id="fastframe" class="data-swap" 
+  src="assets/html/start.html" 
+  frameborder="0" width="100%" height="100%" allow="encrypted-media" id="fastframe" class="data-swap" 
 >
-	Si tu n'arrives pas à charger l'iFrame cela est sûrement à cause de ton navigateur, met le à jour! :)
+  Si tu n'arrives pas à charger l'iFrame cela est sûrement à cause de ton navigateur, met le à jour! :)
 </iframe>
 
 <div id="wipe" class="uk-flex-top" uk-modal>
@@ -172,6 +149,7 @@
 
 	<script src="assets/js/uikit.min.js" defer></script>
 	<script src="assets/js/uikit-icons.min.js" defer></script>
+	<script src="assets/js/clipboard.min.js" async></script>
 	<script type="text/javascript">
 		var date  = "05/04/1996";
 		var birth = new Date(date);    
@@ -183,6 +161,8 @@
     	const text_bornYear = ' ('+date+')';
 		const text_yearsOld = 'Âgée de '+res_age+' ans';
 		$('li[id="days.yearsOld"]').filter(":contains('days.yearsOld')").html("<a title='"+text_yearsOld+text_bornYear+"' uk-tooltip='title: "+text_yearsOld+text_bornYear+"; pos: bottom'>"+text_yearsOld+"</a>");
+
+		$('.data-swap').attr('src','assets/html/'+view+'.html');
 	</script>
 </body>
 </html>
