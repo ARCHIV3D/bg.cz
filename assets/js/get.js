@@ -14,4 +14,4 @@ function $_GET(param) {
 }
 
 var $_GET = $_GET(),
-    view = $_GET['skipTo'];
+    view = $_GET['view'];

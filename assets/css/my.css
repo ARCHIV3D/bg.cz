@@ -4,6 +4,7 @@ body {
 	margin: 0;
 	overflow-y: hidden;
 	overflow-x: hidden;
+	background-color: #f8f9fa;
 }
 
 iframe {
@@ -104,4 +105,8 @@ iframe {
 .uk-notification-bottom-center, .uk-notification-top-center {
     left: 65%!important;
     margin-left: -175px;
+}
+
+.small-mtop {
+	margin-top: 2px!important;
 }

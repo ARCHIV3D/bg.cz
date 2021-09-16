@@ -1,81 +1,214 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
+	<link rel="dns-prefetch" href="//docs.google.com">
+	<link rel="dns-prefetch" href="//ssl.gstatic.com">
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Redirection en cours...</title>
-	<meta name="robots" content="noindex nofollow">
-	<style type="text/css">
-	* {
-		font-family: Segoe UI;
-		margin: 0;
-		padding: 0;
-		border: 0;
-		outline: 0;
-	}
-	body {
-		color: #EEE;
-	}
-	#false {
-		background-color: #291616;
-	}
-	.false {
-		position: fixed;
-		font-size: 20px;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	#true {
-		background-color: #0D1117;
-	}
-	.true {
-		position: fixed;
-		font-size: 20px;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	</style>
-</head>
-<body id="true">
-	<div class="true">
-		<p>Vous allez être rediriger vers <span id="link">{{ link }}</span> dans <span id="seconds">{{ seconds }}</span> secondes.</p>
-	</div>
-
-<meta http-equiv="refresh" content="5; URL=/hors-roleplay" />
-<script type="text/javascript">
-	var link = '/hors-roleplay';
-	var seconds = 5;
-	var foo;
-	var default_seconds = seconds;
-
-	function defaultValues() {
-		document.getElementById("link").innerHTML = link;
-		document.getElementById("seconds").innerHTML = default_seconds;
-	}
-
-	function redirect() {
-		document.location.href = link;
-	}
-
-	function updateSecs() {
-		document.getElementById("seconds").innerHTML = seconds;
-		seconds--;
-		if (seconds == -1) {
-		    clearInterval(foo);
-		    redirect();
+	<title>Introduction - Mira Smejkalová</title>
+	<meta property="og:title" content="Mira Smejkalová" />
+	<meta name="twitter:title" content="Mira Smejkalová">
+	<meta name="description" content="Cette page est totalement HRP, merci de ne pas en tenir compte en RP ! Des informations sont pas dites comme pour les ami(e)s pour évité le HRP/RP non voulu, et elle ne seront pas dites."/>
+	<meta property="og:description" content="Cette page est totalement HRP, merci de ne pas en tenir compte en RP ! Des informations sont pas dites comme pour les ami(e)s pour évité le HRP/RP non voulu, et elle ne seront pas dites."/>
+	<meta name="twitter:description" content="Cette page est totalement HRP, merci de ne pas en tenir compte en RP ! Des informations sont pas dites comme pour les ami(e)s pour évité le HRP/RP non voulu, et elle ne seront pas dites.">
+	<link rel="shortcut icon" href="assets/img/icon.png">
+	<meta property="og:image" content="assets/img/meta-min.jpg"/>
+	<meta name="twitter:image" content="assets/img/meta-min.jpg">
+	<meta name="twitter:card" content="summary">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow" />
+	<link rel="stylesheet" type="text/css" href="assets/css/my.css">
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/get.js"></script>
+	<script type="text/javascript">
+		// Get.js integrated
+		function dataIntro() {
+		  $('.data-swap').attr('src','assets/html/undefined.html');
+		  window.history.pushState('intro', 'Introduction - Mira Smejkalová', '/?view=intro');
+		  document.title = 'Introduction - Mira Smejkalová';
 		}
-	}
+		function dataBackground() {
+		  $('.data-swap').attr('src','https://docs.google.com/document/d/1q133ohRRzX3-YqD9idGtDM9sm_ifps2eFnPc_mV_Ka0/edit?usp=sharing');
+		  window.history.pushState('background', 'Background de Mira Smejkalová', '/?view=background');
+		  document.title = 'Background de Mira Smejkalová';
+		}
+		function dataResume() {
+		  $('.data-swap').attr('src','https://docs.google.com/document/d/10tbM-yULa_7aInAmq-GIlfvZycwD9Ak0vPV-nldLTew/edit?usp=sharing');
+		  window.history.pushState('resume', 'Résumé de Mira Smejkalová', '/?view=resume');
+		  document.title = 'Résumé de Mira Smejkalová';
+		}
+		function dataEScene() {
+		  $('.data-swap').attr('src','assets/html/endscene.html');
+		  window.history.pushState('endscene', 'End Scene de Sasha Reed Messina', '/?view=endscene');
+		  document.title = 'End Scene de Sasha Reed Messina';
+		}
+	</script>
+	<script type="text/javascript">
+		// Title.js integrated
+		if (view == 'intro') {
+    		document.title = 'Introduction - Mira Smejkalová';
+		} else if (view == 'background') {
+			document.title = 'Background de Mira Smejkalová';
+		} else if (view == 'resume') {
+			document.title = 'Résumé de Mira Smejkalová';
+		} else if (view == 'endscene') {
+			document.title = 'End Scene de Sasha Reed Messina';
+		}
+	</script>
+	<script type="text/javascript">
+		// Main.js integrated
+		jQuery(document).ready(function( $ ){
+		   $('iframe').on('load', function() {
+		      setTimeout(function () {
+		         jQuery("#fastframe").css("display","block");
+		      }, 2000); // 2 seconds
+		   },)
+		});
+		function itsHRP(){
+			UIkit.notification({message: 'Cette page est totalement HRP, merci de ne pas en tenir compte en RP !', pos: 'top-right', status: 'danger'})
+			UIkit.notification({message: 'Des informations sont pas dites comme pour les ami(e)s pour évité le HRP/RP non voulu, et elle ne seront pas dites.', pos: 'top-right', status: 'warning', timeout: 0})	
+		}
+	</script>
+</head>
+<body onload="itsHRP();">
+<nav class="uk-navbar-container uk-margin" style="background-color:#2c2c2c;color:white!important;" uk-navbar>
+    <div class="uk-navbar-left">
+        <a title="Retournez a l'introduction" uk-tooltip="title: Retournez a l'introduction" class="uk-navbar-item uk-logo" class="intro" onclick="dataIntro();">
+        	<img src="assets/img/986b62020ec24a66c083ae9bdff0d90f.jpg" alt="logo" width="80" height="80" draggable="false">
+        </a>
+        <ul class="uk-navbar-nav">
+            <li>
+	            <a title='Raisons de la demande de WIPE' uk-tooltip='title: Raisons de la demande de WIPE' rel="noopener" href="#wipe" uk-toggle>
+	            	<span class="small-mtop" uk-icon="icon: question; ratio: 0.8"></span>
+					Raisons WIPE
+				</a>
+	        </li>
+	        <li>
+	            <a title='Background en entier' uk-tooltip='title: Background en entier' class="background" onclick="dataBackground();">
+	            	<span class="small-mtop" uk-icon="icon: copy; ratio: 0.8"></span>
+	            	Background
+	            </a>
+	        </li>
+	        <li>
+	            <a title='Résumé du background' uk-tooltip='title: Résumé du background' class="resume" onclick="dataResume();">
+	            	<span class="small-mtop" uk-icon="icon: file-edit; ratio: 0.8"></span>
+	            	Résumé
+	            </a>
+	        </li>
+	        <li>
+	            <a title='Télécharger les .PDF en entier' uk-tooltip='title: Télécharger les .PDF en entier' rel="noopener" href="#download" uk-toggle>
+	            	<span class="small-mtop" uk-icon="icon: download; ratio: 0.9"></span>
+	            	Télécharger les .PDF
+	            </a>
+	        </li>
+	        <li id="auto.yearsOld">
+	            {{ auto.yearsOld }}
+	        </li>
+	        <li>
+	            <a title='Scène RP de fin' uk-tooltip='title: Scène RP de fin' class="endscene" onclick="dataEScene();">
+	            	<span class="small-mtop" uk-icon="icon: video-camera; ratio: 0.9"></span>
+	            	End Scene
+	            </a>
+	        </li>
+        </ul>
+    </div>
+</nav>
 
-	function countdownTimer() {
-		foo = setInterval(function () {
-		    updateSecs()
-		}, 1000);
-	}
+<iframe 
+  src="assets/html/undefined.html" 
+  frameborder="0" width="100%" height="100%" allow="encrypted-media" id="fastframe" class="data-swap" 
+>
+  Si tu n'arrives pas à charger l'iFrame cela est sûrement à cause de ton navigateur, met le à jour! :)
+</iframe>
 
-	defaultValues();
-	countdownTimer();
-</script>
+<div id="wipe" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" style="margin: 0px 21.3%!important;width: 1000px!important;margin-top: auto!important;margin-bottom: auto!important;">
+    	<button class="uk-modal-close-default" type="button" uk-close></button>
+        <h2 class="uk-modal-title">Les raisons de la demande de WIPE</h2>
+        <p>Comme vous le savez sans doute, j'ai fait une demande de WIPE le <b>22 Août a 06h40</b> <i>(<a href="assets/img/wipeforSasha.jpg" title="Voir le screen de la demande" uk-tooltip='title: Voir le screen de la demande' target="_blank" rel="noopener nofollow">screen</a>)</i> <b>puis finalisé a 17h30</b> <i>(<a href="assets/img/wipeforSasha_2.png" title="Voir le screen de la finalisation" uk-tooltip='title: Voir le screen de la finalisation' target="_blank" rel="noopener nofollow">screen</a>)</i>, <br> et cela vous fait peut-être demander pourquoi "déjà en redemander une seconde" <i>(<span id="auto.wipeTime">{{ auto.wipeTime }}</span>)</i> et quel est les raisons reliées a cette dernière.</p>
+        <p><b>Pour revenir un instant sur le WIPE de Cateleya Cortes</b>, il faut savoir que <b>je n'ai techniquement jamais joué avec</b> et fait de scène donc de mon côté personnellement, j<b>e ne considère pas que ce personnage est existé</b> est donc que finalement plutôt qu'une WIPE <b>cela était plus un changement de premier personnage</b> qui a donc était Sasha Reed Messina, le personnage que j'ai donc actuellement <i>(malheureusement)</i>.</p>
+        <hr>
+        <p><b>Nous pouvons donc désormais passer réellement aux raisons</b> me poussant a abandonné le personnage de Sasha Reed Messina <b>qui était censé avoir un lien</b> avec Alexander Reed en tant que "demi-sœur".</p>
+        <p>Dans un premier temps comme vous le savez si vous avez vu le <a href="https://r0leplay.github.io/bg/pdf/REED.MESSINA_Sasha.pdf" target="_blank" rel="noopener nofollow" title="Voir le background de Sasha" uk-tooltip='title: Voir le background de Sasha'>background de Sasha</a> <b>normalement cette dernière devait avoir une potentiel futur relation avec Alexander Reed</b> (KSJ) <b>néanmoins ce dernier a décidé d'être distant dans un premier temps</b> ce qui a totalement niquer le côté "Elle viens pour être avec son frère et essayer de combler le temps perdu" <b>puis dans un second temps, nous avions même plus de Bonjour ou autres</b>, même en passant moi, <b>en répondant même que très rarement en terme professionnel également</b>.</p>
+        <p><b>Rien qu'avec cela vous pouvez comprendre que les envies de Sasha de rester spécialement a Los Santos</b> alors qu'elle aurait préféré commencé par New York ou d'autres villes de ce genre, sachant qu'elle venait à Los Santos uniquement pour son demi-frère est bien... Cette envie <b>est donc totalement dissipée et désormais, elle n'a plus envie de rester</b>.</p>
+        <p>De plus, <b>elle n'as donc aucune attache a Los Santos est désormais avec la relation qui existe avec le demi-frère qui est d'inconnu elle a justement un goût de dégoût</b> malheureusement de cette ville, <b>même si elle ne met pas toute la population dans le même bateau</b> la preuve avec 36 qui l'accompagnait à l'aéroport afin de prendre l'avion.</p>
+        <hr>
+        <p>En clair, même si le WIPE est actuellement refusé pour le fait du temps entre les 2 <i>(même si le règlement spécifie sa a 0 endroit, et que tout est en accord avec les règles au niveau de la situation de Sasha, etc...)</i> sachez que je serais absente du serveur jusqu'à la possibilité de jouer Mira Smejkalová est pour être logique avec les idées & actions de Sasha.</p>
+        <p class="uk-text-right">
+            <a title='Scène RP de fin' uk-tooltip='title: Scène RP de fin' class="uk-button uk-button-default" rel="noopener" href="https://www.youtube-nocookie.com/embed/482X20wf6gs?mute=1" target="_blank" uk-toggle>Scène RP de fin</a>
+            <a title='Savoir la Situation, Scènes, etc...' uk-tooltip='title: Savoir la Situation, Scènes, etc...' href="#sasha" rel="noopener" class="uk-button uk-button-default" uk-toggle>Savoir la Situation, Scènes, etc...</a>
+            <a title='Savoir la Situation, Scènes, etc...' uk-tooltip='title: Savoir la Situation, Scènes, etc...' href="#sasha" rel="noopener" class="uk-button uk-button-default" uk-toggle><span uk-icon="forward"></span></a>
+        </p>
+    </div>
+</div>
+<div id="sasha" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" style="margin: 0px 21.3%!important;width: 1000px!important;margin-top: auto!important;margin-bottom: auto!important;">
+    	<button class="uk-modal-close-default" type="button" uk-close></button>
+        <h2 class="uk-modal-title">Savoir la Situation, Scènes, etc...</h2>
+        <h4>Au niveau des scènes</h4>
+        <p>- Police: Elle a déposé sa plaque officiellement & les scènes sont finis, <br>
+           - Civil: Elle a finis toute ses scènes & a été déposé par 36.</p>
+        <h4>Au niveau de la situation</h4>
+        <p>- Argent: Aucun dons d'argent n'as été fait (l'argent mis dans le compte est le salaire).</p>
+        <h4>Respect des conditions</h4>
+        <p>- Si vous vous retrouvez bloqué en RP: <br> Oui, du au fait d'être sans rien hormis la PR mais rien avance pour les raisons juste avant, <br>
+           - Vous n’appréciez plus votre RP: <br> Oui, je n'y trouve plus de réel envie pour cela que je suis de moins en moins présente hormis si on a besoin de 06, <br> 
+           - Votre personnage n’a plus de scènes en cours: Oui, <br> 
+           - Un dossier de wipe et un nouveau background doivent être envoyés via un ticket et validés par le staff: Si vous le voyez, Oui, <br> 
+           - Avant un wipe votre personnage ne pourra pas avoir de legué ou cédé des biens. <br> 
+             Et ne pourra pas placé argent ou items dans un coffre afin de le récupérer avec le nouveau personnage: Respecté, <br>
+           - Après un wipe votre personnage ne pourra pas avoir de liens familiaux avec une personne déjà présente en ville <br> depuis plus d’une semaine: Aucun lien familiale, <br>
+           - Donner des sommes d’argent que ce soit en virement, en cash, <br> ou autre pour des raisons “fictives” ou dont vous êtes décidataire: Respecté, <br>
+           - Donner des objets importants de son inventaire (Armes par exemple): Respecté, <br> 
+           - Tenter de re vendre ou changer les papiers de son véhicule: Respecté.
+        <p>
+        <p class="uk-text-right">
+            <a title='Retournez en arrière' uk-tooltip='title: Retournez en arrière' class="uk-button uk-button-default" rel="noopener" href="#wipe" uk-toggle><span uk-icon="reply"></span></a>
+            <a title='Retournez en arrière' uk-tooltip='title: Retournez en arrière' class="uk-button uk-button-default" rel="noopener" href="#wipe" uk-toggle>Retournez en arrière</a>
+        </p>
+    </div>
+</div>
+<div id="download" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    	<button class="uk-modal-close-default" type="button" uk-close></button>
+        <h2 class="uk-modal-title">Télécharger le .PDF</h2>
+        <p>En téléchargeant le PDF vous aurais la version entière et non le résumé, de plus le PDF retire plusieurs choses du background qui sont les suivantes : <br>
+        - GIF (Image animé) qui se bloque a la première image fixe.</p>
+        <p>Si vous souhaitez malgré tout toujours le télécharger (déconseillé) contrairement a utilisé ce lien, vous avez les actions ci-dessous.</p>
+        <p class="uk-text-right">
+            <a title='Télécharger le Résumé' uk-tooltip='title: Télécharger le Résumé' class="uk-button uk-button-default" href="/assets/pdf/resume.pdf" download>Résumé</a>
+            <a title='Télécharger le Background' uk-tooltip='title: Télécharger le Background' class="uk-button uk-button-primary" href="/assets/pdf/background.pdf" download>Background</a>
+        </p>
+    </div>
+</div>
+
+	<script src="assets/js/uikit.min.js" defer></script>
+	<script src="assets/js/uikit-icons.min.js" defer></script>
+	<script type="text/javascript">
+		// Birth.js integrated
+		var date  = "05/04/1996";
+		var birth = new Date(date);    
+    	var month = Date.now() - birth.getTime();    
+    	var age = new Date(month);        
+    	var year = age.getUTCFullYear();   
+    	var res_age = Math.abs(year - 1970); 
+
+    	const text_bornYear = ' ('+date+')';
+		const text_yearsOld = 'Âgée de '+res_age+' ans';
+		$('li[id="auto.yearsOld"]').filter(":contains('auto.yearsOld')").html("<a title='"+text_yearsOld+text_bornYear+"' uk-tooltip='title: "+text_yearsOld+text_bornYear+"; pos: bottom'><span class='small-mtop' uk-icon='icon: bell; ratio: 0.9'></span>"+text_yearsOld+"</a>");
+	</script>
+	<script type="text/javascript">
+		// WipeTime.js integrated
+		var ddate = "2021/08/22"; // "1629590400" // "22/08/2021"
+		var dWipe = new Date(ddate);
+		var dToday = new Date();
+		var difference = dToday.getTime() - dWipe.getTime();
+		var daysDiff = Math.ceil(difference / (1000 * 3600 * 24));
+		var WipeTime = daysDiff-1;
+
+		$('span[id="auto.wipeTime"]').filter(":contains('auto.wipeTime')").html(WipeTime+" jours écoulé depuis l'apparition de Sasha");
+	</script>
+	<script type="text/javascript">
+		$('.data-swap').attr('src','assets/html/'+view+'.html');
+	</script>
 </body>
 </html>
