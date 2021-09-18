@@ -6,7 +6,7 @@ GitHub public source codes of websites based on the domain "<a href="https://r0l
 
 # Quel personnage est relié a qu'elle branche? (:blue_heart:) <br> Which character is connected to which branch? (:heart:)
 ### <b>web-01</b> → Miroslava/Mira Smejkalová (<a href="https://github.com/r0leplay/bg.cz/tree/web-01">:eyes:</a>) <br>
-<img src="https://img.shields.io/github/last-commit/r0leplay/bg.cz/web-01?style=flat-square" alt="last commit"> <img src="https://img.shields.io/github/commit-activity/m/r0leplay/bg.cz/web-01?style=flat-square" alt="commit activity"> <img src="https://img.shields.io/website?down_color=red&down_message=offline&style=flat-square&up_color=dark-green&up_message=online&url=https%3A%2F%2Fr0leplay.github.io%2Fbg.cz%2F" alt="website uptime">
+<a href="https://github.com/r0leplay/bg.cz"><img src="https://img.shields.io/github/last-commit/r0leplay/bg.cz/web-01?style=flat-square" alt="last commit"></a> <a href="https://github.com/r0leplay/bg.cz"><img src="https://img.shields.io/github/commit-activity/m/r0leplay/bg.cz/web-01?style=flat-square" alt="commit activity"></a> <a href="https://github.com/r0leplay/bg.cz"><img src="https://img.shields.io/website?down_color=red&down_message=offline&style=flat-square&up_color=dark-green&up_message=online&url=https%3A%2F%2Fr0leplay.github.io%2Fbg.cz%2F" alt="website uptime"></a>
 
 # Statistiques Global (:blue_heart:) <br> Global Statistics (:heart:)
-<img src="https://img.shields.io/github/languages/code-size/r0leplay/bg.cz?style=for-the-badge" alt="code size"> <img src="https://img.shields.io/github/repo-size/r0leplay/bg.cz?style=for-the-badge" alt="repo size">
+<a href="https://github.com/r0leplay/bg.cz"><img src="https://img.shields.io/github/languages/code-size/r0leplay/bg.cz?style=for-the-badge" alt="code size"></a> <a href="https://github.com/r0leplay/bg.cz"><img src="https://img.shields.io/github/repo-size/r0leplay/bg.cz?style=for-the-badge" alt="repo size"></a>
