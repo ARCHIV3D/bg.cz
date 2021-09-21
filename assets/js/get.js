@@ -14,4 +14,5 @@ function $_GET(param) {
 }
 
 var $_GET = $_GET(),
-    view = $_GET['view'];
+    getView = $_GET['view'],
+    getModal = $_GET['modal'];
