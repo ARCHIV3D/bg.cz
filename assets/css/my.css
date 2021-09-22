@@ -6,7 +6,6 @@ body {
 	overflow-x: hidden;
 	background-color: #f8f9fa;
 }
-
 iframe {
 	display: block;
 	background: #000;
@@ -15,7 +14,6 @@ iframe {
 	width: 100vw;
 	margin-top: -10vh;
 }
-
 #bt-nav {
 	color: #fff;
 	appearance: none;
@@ -27,17 +25,14 @@ iframe {
 	font-size: .875rem;
 	text-transform: uppercase;
 }
-
 #bt-nav:hover {
 	color: #7d7d7d;
 }
-
 .uk-notification-message-warning {
 	padding: 15px !important;
 	font-size: 1.14rem !important;
 	margin-top: -20px !important;
 }
-
 .button {
 	border: 10px solid #2c2c2c;
 	border-radius: 6px;
@@ -45,13 +40,11 @@ iframe {
 	transition: 0.2s all ease-in-out;
 	overflow: hidden;
 }
-
 .button .container {
 	position: relative;
 	height: 40px;
 	width: 120px;
 }
-
 .button .container .normal,
 .button .container .hover,
 .button .container .copied {
@@ -63,50 +56,41 @@ iframe {
 	position: absolute;
 	transition: 0.2s all ease-in-out;
 }
-
 .button .container .normal {
 	opacity: 1;
 	color: white;
 	top: 0%;
 }
-
 .button .container .hover,
 .button .container .copied {
 	opacity: 0;
 	top: 100%;
 	color: white;
 }
-
 .button.hover .container .normal {
 	top: -100%;
 	opacity: 0;
 }
-
 .button.hover .container .hover {
 	top: 0%;
 	opacity: 1;
 }
-
 .button.copied .container .normal,
 .button.copied .container .hover {
 	top: -100%;
 }
-
 .button.copied .container .copied {
 	top: 0%;
 	opacity: 1;
 	color: white;
 }
-
 .bt-copy {
 	background-color: #2c2c2c !important;
 }
-
 .uk-notification-bottom-center, .uk-notification-top-center {
     left: 65%!important;
     margin-left: -175px;
 }
-
 .small-mtop {
 	margin-top: 2px!important;
 }
