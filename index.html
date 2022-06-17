@@ -26,25 +26,25 @@
 	<script type="text/javascript">
 		// Data.js integrated
 		function dataIntro() {
-			currentURL = "/?view=intro";
+			currentURL = "https://archiv3d.github.io/bg.cz/?view=intro";
 			$('.data-swap').attr('src','assets/html/intro.html');
 			window.history.pushState('intro', 'Introduction - Mira Smejkalová', currentURL);
 			document.title = 'Introduction - Mira Smejkalová';
 		}
 		function dataBackground() {
-			currentURL = "/?view=background";
+			currentURL = "https://archiv3d.github.io/bg.cz/?view=background";
 			$('.data-swap').attr('src','https://docs.google.com/document/d/1q133ohRRzX3-YqD9idGtDM9sm_ifps2eFnPc_mV_Ka0/edit?usp=sharing');
 			window.history.pushState('background', 'Background de Mira Smejkalová', currentURL);
 			document.title = 'Background de Mira Smejkalová';
 		}
 		function dataResume() {
-			currentURL = "/?view=resume";
+			currentURL = "https://archiv3d.github.io/bg.cz/?view=resume";
 			$('.data-swap').attr('src','https://docs.google.com/document/d/10tbM-yULa_7aInAmq-GIlfvZycwD9Ak0vPV-nldLTew/edit?usp=sharing');
 			window.history.pushState('resume', 'Résumé de Mira Smejkalová', currentURL);
 			document.title = 'Résumé de Mira Smejkalová';
 		}
 		function dataEScene() {
-			currentURL = "/?view=endscene";
+			currentURL = "https://archiv3d.github.io/bg.cz/?view=endscene";
 			$('.data-swap').attr('src','assets/html/endscene.html');
 			window.history.pushState('endscene', 'End Scene de Sasha Reed Messina', currentURL);
 			document.title = 'End Scene de Sasha Reed Messina';
@@ -75,19 +75,19 @@
 		// Title.js integrated
 		if (getView == 'intro') {
     		document.title = 'Introduction - Mira Smejkalová';
-    		currentURL = "/?view=intro";
+    		currentURL = "https://archiv3d.github.io/bg.cz/?view=intro";
 		} else if (getView == 'background') {
 			document.title = 'Background de Mira Smejkalová';
-			currentURL = "/?view=background";
+			currentURL = "https://archiv3d.github.io/bg.cz/?view=background";
 		} else if (getView == 'resume') {
 			document.title = 'Résumé de Mira Smejkalová';
-			currentURL = "/?view=resume";
+			currentURL = "https://archiv3d.github.io/bg.cz/?view=resume";
 		} else if (getView == 'endscene') {
 			document.title = 'End Scene de Sasha Reed Messina';
-			currentURL = "/?view=endscene";
+			currentURL = "https://archiv3d.github.io/bg.cz/?view=endscene";
 		} else {
 			document.title = 'Introduction - Mira Smejkalová';
-			currentURL = "/?view=intro";
+			currentURL = "https://archiv3d.github.io/bg.cz/?view=intro";
 			setTimeout(function () {
 				window.history.pushState('intro', 'Introduction - Mira Smejkalová', currentURL);
 			}, 210); // 0.21 seconds
@@ -154,7 +154,7 @@
 
 
 <iframe 
-  src="assets/html/intro.html" 
+  src="https://archiv3d.github.io/bg.cz/assets/html/intro.html" 
   frameborder="0" width="100%" height="100%" allow="encrypted-media" id="fastframe" class="data-swap" 
 >
   Si tu n'arrives pas à charger l'iFrame cela est sûrement à cause de ton navigateur, met le à jour! :)
@@ -218,8 +218,8 @@
 	        <p>Si vous souhaitez malgré tout toujours le télécharger (déconseillé) contrairement a utilisé ce lien, vous avez les actions ci-dessous.</p>
 	    </span>
         <p class="uk-text-right">
-            <a title='Télécharger le Résumé' uk-tooltip='title: Télécharger le Résumé' class="uk-button uk-button-default" href="/assets/pdf/resume.pdf" download>Résumé</a>
-            <a title='Télécharger le Background' uk-tooltip='title: Télécharger le Background' class="uk-button uk-button-primary" href="/assets/pdf/background.pdf" download>Background</a>
+            <a title='Télécharger le Résumé' uk-tooltip='title: Télécharger le Résumé' class="uk-button uk-button-default" href="https://archiv3d.github.io/bg.cz//assets/pdf/resume.pdf" download>Résumé</a>
+            <a title='Télécharger le Background' uk-tooltip='title: Télécharger le Background' class="uk-button uk-button-primary" href="https://archiv3d.github.io/bg.cz//assets/pdf/background.pdf" download>Background</a>
         </p>
     </div>
 </div>
@@ -252,7 +252,7 @@
 	<script type="text/javascript">
 		// Route.js integrated
 		if (getView == getView) {
-    		$('.data-swap').attr('src','assets/html/'+getView+'.html');
+    		$('.data-swap').attr('src','https://archiv3d.github.io/bg.cz/assets/html/'+getView+'.html');
 		} else { 
 			console.notification('[Route.js] No view was requested in the URL. (View: '+getView+')');
 		}
